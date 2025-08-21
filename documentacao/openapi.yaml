@@ -1,0 +1,104 @@
+openapi: 3.0.3
+info:
+  title: Eliobros DL API
+  version: 1.0.0
+  description: API de download multi‑plataforma
+servers:
+  - url: http://93.127.129.84:3001
+paths:
+  /auth/register:
+    post:
+      summary: Registrar novo usuário
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username: { type: string }
+                email: { type: string, format: email }
+                password: { type: string }
+      responses:
+        '200': { description: Registrado }
+  /auth/login:
+    post:
+      summary: Login e obtenção de JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username: { type: string }
+                password: { type: string }
+      responses:
+        '200': { description: Autenticado }
+  /api/keys/generate:
+    post:
+      summary: Gerar API Key
+      security: [{ bearerAuth: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyName: { type: string }
+      responses:
+        '200': { description: Chave gerada }
+  /api/keys:
+    get:
+      summary: Listar API Keys
+      security: [{ bearerAuth: [] }]
+      responses:
+        '200': { description: Lista de chaves }
+  /api/keys/{keyId}/deactivate:
+    put:
+      summary: Desativar API Key
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - in: path
+          name: keyId
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Chave desativada }
+  /api/download/{platform}:
+    post:
+      summary: Download de mídia
+      parameters:
+        - in: path
+          name: platform
+          required: true
+          schema: { type: string, enum: [youtube, tiktok, instagram, facebook] }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url: { type: string }
+                type: { type: string, enum: [mp4, mp3, m4a, wav] }
+      responses:
+        '200': { description: Resultado do download }
+      security: [{ apiKeyHeader: [] }]
+  /api/stats:
+    get:
+      summary: Estatísticas da API Key
+      security: [{ apiKeyHeader: [] }]
+      responses:
+        '200': { description: Estatísticas }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    apiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-Key
