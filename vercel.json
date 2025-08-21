@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "eliobros-dl-api-docs",
+  "routes": [
+    { "src": "/", "dest": "/documentacao/site/index.html" },
+    { "src": "/index.html", "dest": "/documentacao/site/index.html" },
+    { "src": "/styles.css", "dest": "/documentacao/site/styles.css" },
+    { "src": "/app.js", "dest": "/documentacao/site/app.js" }
+  ]
+}

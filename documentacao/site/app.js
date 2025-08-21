@@ -1,12 +1,12 @@
 (function(){
   const routes = {
-    '#introducao': '../introducao.md',
-    '#autenticacao': '../autenticacao.md',
-    '#chaves': '../chaves.md',
-    '#downloads': '../downloads.md',
-    '#estatisticas': '../estatisticas.md',
-    '#erros': '../erros.md',
-    '#api': '../openapi.yaml'
+    '#introducao': '/documentacao/introducao.md',
+    '#autenticacao': '/documentacao/autenticacao.md',
+    '#chaves': '/documentacao/chaves.md',
+    '#downloads': '/documentacao/downloads.md',
+    '#estatisticas': '/documentacao/estatisticas.md',
+    '#erros': '/documentacao/erros.md',
+    '#api': '/documentacao/openapi.yaml'
   };
 
   const docEl = document.getElementById('doc-container');
