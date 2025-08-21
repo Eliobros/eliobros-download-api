@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; color: #111; background: #fafafa; }
+
+.sidebar { position: fixed; top: 0; left: 0; bottom: 0; width: 260px; background: #111827; color: #fff; padding: 20px; overflow-y: auto; }
+.brand { font-weight: 700; font-size: 18px; margin-bottom: 16px; }
+.sidebar nav a { display: block; color: #d1d5db; text-decoration: none; padding: 8px 0; border-radius: 6px; }
+.sidebar nav a:hover { color: #fff; }
+
+.content { margin-left: 260px; min-height: 100vh; display: flex; flex-direction: column; }
+.topbar { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; }
+.topbar .title { font-size: 18px; font-weight: 600; }
+.topbar .github { color: #2563eb; text-decoration: none; }
+
+.doc { padding: 24px; max-width: 980px; }
+.doc h1, .doc h2, .doc h3 { color: #111827; }
+.doc pre { background: #0b1020; color: #e5e7eb; padding: 14px; border-radius: 8px; overflow: auto; }
+.doc code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
+.doc table { border-collapse: collapse; width: 100%; }
+.doc table th, .doc table td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
+
+.swagger { padding: 0 24px 24px; }
+
+@media (max-width: 900px) {
+  .sidebar { position: static; width: auto; }
+  .content { margin-left: 0; }
+}
