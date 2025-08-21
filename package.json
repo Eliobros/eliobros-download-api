@@ -1,0 +1,56 @@
+{
+  "name": "eliobros-download-api",
+  "version": "1.0.0",
+  "description": "Cliente JavaScript/TypeScript para a API de download multi-plataforma (YouTube, TikTok, Instagram, Facebook)",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src/",
+    "examples/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest",
+    "example:basic": "node examples/basic-usage.js",
+    "example:batch": "node examples/batch-download.js",
+    "example:advanced": "node examples/advanced.js",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "download",
+    "youtube",
+    "tiktok",
+    "instagram",
+    "facebook",
+    "api-client",
+    "media-download",
+    "video-download",
+    "audio-download",
+    "social-media"
+  ],
+  "author": "Elio Bros",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliobros/eliobros-download-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eliobros/eliobros-download-api/issues"
+  },
+  "homepage": "https://github.com/eliobros/eliobros-download-api#readme",
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.55.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
