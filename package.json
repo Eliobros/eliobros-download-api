@@ -1,6 +1,6 @@
 {
-  "name": "eliobros-download-api",
-  "version": "1.0.0",
+  "name": "eliobros-dl-api",
+  "version": "1.1.0",
   "description": "Cliente JavaScript/TypeScript para a API de download multi-plataforma (YouTube, TikTok, Instagram, Facebook)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -30,16 +30,16 @@
     "audio-download",
     "social-media"
   ],
-  "author": "Elio Bros",
+  "author": "Eliobros Tech",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eliobros/eliobros-download-api.git"
+    "url": "https://github.com/Eliobros/eliobros-download-api.git"
   },
   "bugs": {
-    "url": "https://github.com/eliobros/eliobros-download-api/issues"
+    "url": "https://github.com/Eliobros/eliobros-download-api/issues"
   },
-  "homepage": "https://github.com/eliobros/eliobros-download-api#readme",
+  "homepage": "https://github.com/Eliobros/eliobros-download-api#readme",
   "dependencies": {
     "axios": "^1.6.0"
   },
