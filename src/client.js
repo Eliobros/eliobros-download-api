@@ -11,7 +11,7 @@ class EliobrosDownloadClient {
    * @param {string} baseURL - URL base da API (padrão: http://localhost:3000)
    * @param {Object} options - Opções adicionais
    */
-  constructor(baseURL = 'http://93.127.129.84:3001', options = {}) {
+  constructor(baseURL = 'http://93.127.129.84:3000', options = {}) {
     this.baseURL = baseURL;
     this.token = null;
     this.apiKey = null;
